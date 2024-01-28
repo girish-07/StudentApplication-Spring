@@ -5,5 +5,6 @@ spring:
   name: student-rest-service
 configuration:
  property:
-  value: Hello from Property file
-  
+  value: Hello from Property file 
+noOfStudents: 10
+schoolName: HighSchool
