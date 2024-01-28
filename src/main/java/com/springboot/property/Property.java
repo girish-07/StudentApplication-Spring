@@ -6,8 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 
-@Component
-@ConfigurationProperties
+//@Component
+//@ConfigurationProperties
 public class Property implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

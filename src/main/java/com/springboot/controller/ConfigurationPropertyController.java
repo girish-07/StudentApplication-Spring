@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springboot.property.ComplexProperty;
 import com.springboot.property.Property;
 
 @RestController
@@ -15,13 +16,17 @@ import com.springboot.property.Property;
 public class ConfigurationPropertyController {
 	
 	@Autowired
-	private Property property;
+	//private Property property;
+	private ComplexProperty complexProperty;
 	
 	@GetMapping
-	public List<String> fetchConfigurationProperties() {
+	/*public List<String> fetchConfigurationProperties() {
 		List<String> propertyValues = new ArrayList<>();
 		propertyValues.add(String.valueOf(property.getNoOfStudents()));
 		propertyValues.add(property.getSchoolName());
 		return propertyValues;
+	}*/
+	public List<Property> fetchConfigurationProperties() {
+		return complexProperty.getProperty();
 	}
 }
